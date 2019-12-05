@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+{% for art in article %}
+<h3>제목 : {{ art.title }}</h3>
+<h5>내용 : {{ art.content }}</h5>
+<a href="/crud/{{ art.id }}/update/">수정하기</a>
+<a href="/crud/{{ art.id }}/delete/">삭제하기</a>
+{% endfor %}
+{% endblock %}
